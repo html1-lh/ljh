@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>试题库 - 在线学习平台</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="logo/logo.jpg" alt="学习平台">
+                    <span>学习平台</span>
+                </a>
+            </div>
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="courses.html">课程内容</a></li>
+                <li><a href="questions.html">试题库</a></li>
+                <li><a href="chat.html">在线交流</a></li>
+                <li><a href="#" onclick="logout()">退出登录</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="questions-container">
+        <h1>试题库</h1>
+        <div class="question-filters">
+            <select id="subject">
+                <option value="">选择章节</option>
+                <option value="1">第一章 网络安全概述</option>
+                <option value="2">第二章 黑客原理与防范措施</option>
+                <option value="3">第三章 网络病毒防治</option>
+                <option value="4">第四章 防火墙技术</option>
+                <option value="5">第五章 密码技术</option>
+                <option value="6">第六章 网络攻击与防御</option>
+                <option value="7">第七章 Web应用安全</option>
+            </select>
+        </div>
+        <div id="questions-list">
+            <div class="quiz-window" id="quizWindow">
+                <div class="quiz-content" id="quizContent">
+                    <div class="quiz-progress">
+                        题目 <span id="currentQuestion">1</span> / <span id="totalQuestions">10</span>
+                    </div>
+                    <div class="question-text" id="questionText"></div>
+                    <div class="options" id="options"></div>
+                    <div class="quiz-controls">
+                        <button id="nextQuestion" disabled>下一题</button>
+                        <button id="submitQuiz" style="display: none;" disabled>提交</button>
+                    </div>
+                </div>
+                <div class="quiz-result" id="quizResult" style="display: none;">
+                    <h3>测试结果</h3>
+                    <p>得分：<span id="score">0</span></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 在线学习平台. 保留所有权利</p>
+    </footer>
+
+
+    <script src="quiz.js"></script>
+</body>
+</html> 
